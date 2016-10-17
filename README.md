@@ -1,6 +1,8 @@
 # FlexBoxFX
 FlexBoxFX is a JavaFX implementation of CSS3 flexbox layout manager.
 
+http://flexbox.io
+
 
 # Why FlexBoxFX? #
 Modern user interface design means Responsive Design to match the needs of all platforms like Desktop, Web and Mobile and different target devices like Laptops, Tablets and Smartphones.
