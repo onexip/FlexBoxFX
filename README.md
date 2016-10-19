@@ -7,6 +7,8 @@ Youtube trailer: https://www.youtube.com/watch?v=nuJ0s5imAdo
 
 Kickstarter: https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag
 
+<iframe width="480" height="270" src="https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag/widget/video.html" frameborder="0" scrolling="no"> </iframe>
+
 
 # Why FlexBoxFX? #
 Modern user interface design means Responsive Design to match the needs of all platforms like Desktop, Web and Mobile and different target devices like Laptops, Tablets and Smartphones.
