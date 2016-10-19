@@ -17,9 +17,9 @@ Since CSS3 there is the flexbox layout manager to create complex responsive layo
 
 Our goal is to write a complete **JavaFX port of CSS3 flexbox layout manager** to hand over the JavaFX developer a modern and powerful layout manager.
 
-**Help us to reach the founding goal** on [kickerstarter](https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag) and become one of the FlexBoxFX sponsors on flexboxfxio. Depending on donation, your company logo, a description and the link to your homepage will be placed in one of the sponsor sections (diamond, gold, silver, bronze).
+**Help us to reach the funding goal** on [kickerstarter](https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag) and become one of the FlexBoxFX sponsors on flexboxfxio. Depending on donation, your company logo, a description and the link to your homepage will be placed in one of the sponsor sections (diamond, gold, silver, bronze).
 
-When the founding goal is reached we start to implement FlexBoxFX as an open source project on GitHub. So FlexBoxFX will be open source and free to use for commercial use.
+When the funding goal is reached we start to implement FlexBoxFX as an open source project on GitHub. So FlexBoxFX will be open source and free to use for commercial use.
 
 # Example #
 ```xml
