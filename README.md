@@ -1,5 +1,5 @@
 # FlexBoxFX
-FlexBoxFX is a JavaFX implementation of CSS3 flexbox layout manager.
+FlexBoxFX is a JavaFX implementation of CSS3 flexbox layout manager (https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 http://flexboxfx.io
 
