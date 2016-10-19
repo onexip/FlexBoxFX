@@ -1,9 +1,9 @@
 # FlexBoxFX
 FlexBoxFX is a JavaFX implementation of CSS3 flexbox layout manager (https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
-http://flexboxfx.io
+Official Website: http://flexboxfx.io
 
-https://www.youtube.com/watch?v=nuJ0s5imAdo
+Youtube trailer: https://www.youtube.com/watch?v=nuJ0s5imAdo
 
 
 # Why FlexBoxFX? #
