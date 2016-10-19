@@ -16,3 +16,12 @@ Our goal is to write a complete JavaFX port of CSS3 flexbox layout manager to ha
 Help us to reach the founding goal on kickerstarter.com and become one of the FlexBoxFX sponsors on flexboxfxio. Depending on donation, your company logo, a description and the link to your homepage will be placed in one of the sponsor sections (diamond, gold, silver, bronze).
 
 When the founding goal is reached we start to implement FlexBoxFX as an open source project on GitHub. So FlexBoxFX will be open source and free to use for commercial use.
+
+# Example #
+```xml
+<FlexBox fx:id="flexBoxPane" horizontalSpace="20" verticalSpace="20" styleClass="flex-pane" direction="ROW"> 
+  <Button text="Item 5" styleClass="item,item1" FlexBox.order="5" FlexBox.grow="1"></Button>
+  <Button text="Item 1" styleClass="item,item2" FlexBox.order="1" FlexBox.grow="2"></Button> 
+  <Button text="Item 10" styleClass="item,item3" FlexBox.order="10" FlexBox.grow="1"></Button> 
+</FlexBox>
+```
