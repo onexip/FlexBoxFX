@@ -19,6 +19,11 @@ Our goal is to write a complete **JavaFX port of CSS3 flexbox layout manager** t
 </FlexBoxPane>
 ```
 
+
+# License #
+FlexBoxFX is open source and released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) –  so it is free to use for non-commercial and commercial use and
+
+
 # Tests #
 
 ## TestButtons (com.onexip.flexboxfx.test) ##
