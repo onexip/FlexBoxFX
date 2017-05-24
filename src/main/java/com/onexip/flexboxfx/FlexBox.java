@@ -22,10 +22,7 @@ public class FlexBox extends Pane
     private boolean performingLayout = false;
     private Orientation bias;
     private boolean biasDirty = true;
-
-
     private boolean verbose = true;
-
     private static final String ORDER_CONSTRAINT = "flexbox-order";
     private static final String GROW_CONSTRAINT = "flexbox-grow";
 
@@ -195,7 +192,6 @@ public class FlexBox extends Pane
             nodesList.add(new FlexBoxItem(node));
         }
 
-
         if (getDirection().equals(FlexBoxDirection.ROW) || getDirection().equals(FlexBoxDirection.ROW_REVERSE))    //todo:
         {
             layoutChildrenForRowDirection(nodesList);
@@ -207,8 +203,6 @@ public class FlexBox extends Pane
 
         long duration = System.nanoTime() - timeStart;
         System.out.println(String.format("# layout duration: %d ms", duration / 1000));
-
-
     }
 
     private void layoutChildrenForColumnDirection(List<FlexBoxItem> nodesList)
@@ -230,7 +224,6 @@ public class FlexBox extends Pane
         {
             nodeIterator = getManagedChildren().listIterator();
         }
-
 
         for (FlexBoxItem flexBoxItem : nodesList)
         {
@@ -258,11 +251,8 @@ public class FlexBox extends Pane
             //contains all nodes per row
             FlexBoxRow flexBoxRow = grid.get(rowIndex);
             ArrayList<FlexBoxItem> rowNodes = flexBoxRow.getNodes();
-
-
             double rowNodeX2 = 0;
             double lastMaxHeight = 0;
-
             //iterate node of row
             for (FlexBoxItem flexBoxItem : rowNodes)
             {
@@ -294,26 +284,15 @@ public class FlexBox extends Pane
         double w = getWidth();
         double minWidthSum = 0;
         double noNodes = 0;
-
         noNodes = nodesList.size();
-
-
         double growWidth = (w - (getHorizontalSpace() * (noNodes - 1)) - getPadding().getLeft() - getPadding().getRight()) / noNodes;
-
-
-        //  double lastX2 = 0;
         int row = 0;
         int i = 0;
-
-
-        //ListIterator<FlexBoxItem> nodeIterator = nodesList.listIterator();
-
 
         /**
          * Precaluclations
          */
         boolean useOrder = false;
-
         for (FlexBoxItem flexBoxItem : nodesList)
         {
             flexBoxItem.minWidth = flexBoxItem.node.minWidth(10);
@@ -341,9 +320,6 @@ public class FlexBox extends Pane
             nodesList = FXCollections.observableArrayList(nodesList);
         }
 
-
-        //nodeIterator = nodesList.listIterator();
-
         /**
          * Calculate column-row-grid for auto wrapping
          */
@@ -354,7 +330,6 @@ public class FlexBox extends Pane
         {
             double nodeWidth = Math.max(growWidth, flexBoxItem.minWidth);
             nodeWidth = flexBoxItem.minWidth;
-
             minWidthSum += nodeWidth;
 
             //is there one more node?
@@ -362,7 +337,6 @@ public class FlexBox extends Pane
             {
                 minWidthSum += getHorizontalSpace();
             }
-            //lastX2 = lastX2 + nodeWidth;
 
             if ((int) minWidthSum > (int) w)
             {
@@ -376,12 +350,10 @@ public class FlexBox extends Pane
             i++;
         }
 
-        //Rows durchgehen und width berechnen
+        //iterate rows and calculate width
         double lastY2 = getPadding().getTop();
         i = 0;
         int noGridRows = grid.size();
-
-
         flexBoxRow = null;
         /**
          * iterate grid to calculate node sizes and positions
@@ -393,7 +365,6 @@ public class FlexBox extends Pane
             flexBoxRow = grid.get(rowIndex);
             ArrayList<FlexBoxItem> rowNodes = flexBoxRow.getNodes();
             int noRowNodes = rowNodes.size();
-
 
             double remainingWidth = w - flexBoxRow.rowMinWidth - (getHorizontalSpace() * (noRowNodes - 1)) - getPadding().getLeft() - getPadding().getRight();
             double flexGrowCellWidth = remainingWidth / flexBoxRow.flexGrowSum;
@@ -407,7 +378,6 @@ public class FlexBox extends Pane
             {
                 rowNodexIterator = rowNodes.listIterator();
             }
-
 
             double rowNodeX2 = getPadding().getLeft();
             double lastMaxHeight = 0;
@@ -424,11 +394,8 @@ public class FlexBox extends Pane
                 double rowNodeWidth = Math.min(rowNodeMaxWidth, Math.max(rowNodeStrechtedWidth, rowNodeMinWidth));
 
                 double h = rowNode.prefHeight(rowNodeWidth);
-
                 rowNode.resizeRelocate(rowNodeX2, lastY2, rowNodeWidth, h);
-
                 lastMaxHeight = Math.max(lastMaxHeight, h);
-
                 rowNodeX2 = rowNodeX2 + rowNodeWidth + getHorizontalSpace();
             }
 
@@ -439,13 +406,10 @@ public class FlexBox extends Pane
             }
             i++;
         }
-
         lastY2 += getPadding().getBottom();
         setMinHeight(lastY2);
         setPrefWidth(lastY2);
-
         computedMinHeight = lastY2;
-
         performingLayout = false;
     }
 
@@ -466,6 +430,4 @@ public class FlexBox extends Pane
     {
         grid.put(row, flexBoxRow);
     }
-
-
 }
