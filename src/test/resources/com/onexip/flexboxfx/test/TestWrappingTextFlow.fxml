@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<MigPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id=""
+        prefWidth="800" prefHeight="300"
+        layout="ins 0" cols="[fill,grow]" rows="[]push"
+>
+    <FlexBox fx:id="flexBoxPane" horizontalSpace="20" verticalSpace="20" styleClass="flex-pane" direction="ROW">
+        <TextFlow styleClass="item,item1">
+            <Text text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+                  styleClass="-fx-fill: white;"></Text>
+        </TextFlow>
+        <TextFlow styleClass="item,item2">
+            <Text
+                    text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+            ></Text>
+        </TextFlow>
+        <TextFlow styleClass="item,item3">
+            <Text
+                    text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+            ></Text>
+        </TextFlow>
+    </FlexBox>
+</MigPane>

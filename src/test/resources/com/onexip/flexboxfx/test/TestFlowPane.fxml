@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<?import com.onexip.flexboxfx.test.HorizontalStackPane?>
+<MigPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id=""
+        prefWidth="800" prefHeight="300"
+        layout="ins 0" cols="[fill,grow]" rows="[]push"
+>
+    <HorizontalStackPane fx:id="flexBoxPane" styleClass="flex-pane">
+        <TextFlow>
+            <Text text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+                  styleClass="item,item1"></Text>
+        </TextFlow>
+    </HorizontalStackPane>
+</MigPane>

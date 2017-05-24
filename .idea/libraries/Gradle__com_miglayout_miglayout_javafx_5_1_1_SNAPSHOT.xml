@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.miglayout:miglayout-javafx:5.1.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miglayout/miglayout-javafx/5.1.1-SNAPSHOT/dc067aeaaa9b8ce073d2c622a441e90a29c26b1e/miglayout-javafx-5.1.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miglayout/miglayout-javafx/5.1.1-SNAPSHOT/421cbd54be1ba2cf96fe83c14226e70d14b24b3b/miglayout-javafx-5.1.1-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

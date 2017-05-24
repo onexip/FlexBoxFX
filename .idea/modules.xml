@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FlexBoxFX.iml" filepath="$PROJECT_DIR$/FlexBoxFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlexBoxFX_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FlexBoxFX_main.iml" group="FlexBoxFX" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlexBoxFX_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FlexBoxFX_test.iml" group="FlexBoxFX" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,26 @@
+.item {
+    -fx-min-width: 150px;
+    -fx-max-width: 800px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-font-size: 16px;
+    -fx-padding: 20;
+}
+
+.item1 {
+    -fx-background-color: yellow;
+
+}
+
+.item2 {
+    -fx-background-color: red;
+}
+
+.item3 {
+    -fx-background-color: green;
+}
+
+.flex-pane {
+    -fx-background-color: black;
+    -fx-padding: 0 0 20px 0;
+}

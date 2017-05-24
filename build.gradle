@@ -1,0 +1,126 @@
+group 'com.onexip'
+version '0.1.5-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven {
+    url "http://mix-software.com:8081/nexus/content/repositories/onexip-snapshots"
+    /*
+    credentials {
+      username UM_NEXUS_UM_USERNAME
+      password UM_NEXUS_UM_PASSWORD
+    }
+    */
+  }
+}
+
+dependencies {
+  compile('org.apache.commons:commons-collections4:4.1+')
+
+  testCompile('com.miglayout:miglayout-javafx:5.1.1-SNAPSHOT')
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+  testCompile ("org.testfx:testfx-core:4.0.+")
+  testCompile ("org.testfx:testfx-junit:4.0.+")
+}
+
+
+
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+task javadocJar(type: Jar) {
+  classifier = 'javadoc'
+  from javadoc
+}
+
+task sourcesJar(type: Jar) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+artifacts {
+  archives javadocJar, sourcesJar
+}
+
+
+/*
+signing {
+  sign configurations.archives
+}
+*/
+
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+      repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+     //   authentication(userName: ossrhUsername, password: ossrhPassword)
+      }
+
+      snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+        //authentication(userName: ossrhUsername, password: ossrhPassword)
+      }
+
+      pom.project {
+        name 'FlexBoxPane'
+        packaging 'jar'
+        // optionally artifactId can be defined here
+        description 'port of CSS3 FlexBox'
+        //url 'http://www.example.com/example-application'
+
+        /*
+        scm {
+          connection 'scm:svn:http://foo.googlecode.com/svn/trunk/'
+          developerConnection 'scm:svn:https://foo.googlecode.com/svn/trunk/'
+          url 'http://foo.googlecode.com/svn/trunk/'
+        }
+        */
+
+        licenses {
+          license {
+            name 'The Apache License, Version 2.0'
+            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          }
+        }
+
+        developers {
+          developer {
+            id 'tobiasbley'
+            name 'Tobias Bley'
+            email 'bley@jpro.io'
+          }
+        }
+      }
+    }
+  }
+}
+
+apply plugin: 'maven-publish'
+
+publishing {
+  repositories {
+    maven {
+      url "http://mix-software.com:8081/nexus/content/repositories/onexip-snapshots"
+      credentials {
+        username UM_NEXUS_DEPLOYMENT_USERNAME
+        password UM_NEXUS_DEPLOYMENT_PASSWORD
+      }
+    }
+    /*maven{
+      url "https://oss.sonatype.org/content/repositories/snapshots"
+    } */
+  }
+  publications {
+    maven(MavenPublication) {
+      from components.java
+    }
+  }
+}
+
+
