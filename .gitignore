@@ -5,4 +5,5 @@ _design
 build
 out
 gradle.properties
+*.iml
 
