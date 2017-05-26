@@ -23,8 +23,8 @@ dependencies {
 
   testCompile('com.miglayout:miglayout-javafx:5.1.1-SNAPSHOT')
   testCompile group: 'junit', name: 'junit', version: '4.12'
-  testCompile ("org.testfx:testfx-core:4.0.+")
-  testCompile ("org.testfx:testfx-junit:4.0.+")
+  testCompile("org.testfx:testfx-core:4.0.+")
+  testCompile("org.testfx:testfx-junit:4.0.+")
 }
 
 
@@ -47,11 +47,13 @@ artifacts {
 }
 
 
-/*
 signing {
   sign configurations.archives
 }
-*/
+
+def isReleaseBuild() {
+  return version.contains("SNAPSHOT") == false
+}
 
 
 uploadArchives {
@@ -60,27 +62,36 @@ uploadArchives {
       beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
       repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-     //   authentication(userName: ossrhUsername, password: ossrhPassword)
+        authentication(userName: ossrhUsername, password: ossrhPassword)
       }
 
-      snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-        //authentication(userName: ossrhUsername, password: ossrhPassword)
+      if (isReleaseBuild())
+      {
+        println 'RELEASE BUILD'
+       // sonatypeRepositoryUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
       }
+      else
+      {
+        println 'DEBUG BUILD'
+       // sonatypeRepositoryUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
+        snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+          authentication(userName: ossrhUsername, password: ossrhPassword)
+        }
+      }
+
 
       pom.project {
-        name 'FlexBoxPane'
+        name 'FlexBoxFX'
         packaging 'jar'
         // optionally artifactId can be defined here
         description 'port of CSS3 FlexBox'
         //url 'http://www.example.com/example-application'
 
-        /*
         scm {
-          connection 'scm:svn:http://foo.googlecode.com/svn/trunk/'
-          developerConnection 'scm:svn:https://foo.googlecode.com/svn/trunk/'
-          url 'http://foo.googlecode.com/svn/trunk/'
+          connection 'scm:git:git@github.com:UltraMixer/FlexBoxFX.git'
+          developerConnection 'scm:git:https://github.com/UltraMixer/FlexBoxFX.git'
+          url 'https://github.com/UltraMixer/FlexBoxFX'
         }
-        */
 
         licenses {
           license {
@@ -93,34 +104,11 @@ uploadArchives {
           developer {
             id 'tobiasbley'
             name 'Tobias Bley'
-            email 'bley@jpro.io'
+            email 'info@onexip.com'
           }
         }
       }
     }
   }
 }
-
-apply plugin: 'maven-publish'
-
-publishing {
-  repositories {
-    maven {
-      url "http://mix-software.com:8081/nexus/content/repositories/onexip-snapshots"
-      credentials {
-        username UM_NEXUS_DEPLOYMENT_USERNAME
-        password UM_NEXUS_DEPLOYMENT_PASSWORD
-      }
-    }
-    /*maven{
-      url "https://oss.sonatype.org/content/repositories/snapshots"
-    } */
-  }
-  publications {
-    maven(MavenPublication) {
-      from components.java
-    }
-  }
-}
-
 
