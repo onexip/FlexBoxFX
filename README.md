@@ -26,6 +26,23 @@ gradle build
 ```
 You'll find the binary jar file here: <project-dir>/build/libs
 
+
+# Maven #
+```
+<!-- https://oss.sonatype.org/content/repositories/snapshots -->
+<dependency>
+    <groupId>com.onexip</groupId>
+    <artifactId>FlexBoxFX</artifactId>
+    <version>0.1.5.1-SNAPSHOT</version>
+</dependency>
+```
+
+# Gradle #
+```
+compile('com.onexip:FlexBoxFX:0.1.5.1-SNAPSHOT')
+```
+
+
 # License #
 FlexBoxFX is open source and released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) –  so it is free to use for non-commercial and commercial use and
 
