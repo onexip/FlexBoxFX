@@ -1,6 +1,6 @@
 .item {
     -fx-min-width: 150px;
-    -fx-max-width: 800px;
+    -fx-max-width: 1800px;
     -fx-background-color: transparent;
     -fx-background-radius: 0;
     -fx-font-size: 16px;
@@ -18,6 +18,18 @@
 
 .item3 {
     -fx-background-color: green;
+}
+
+.item4 {
+    -fx-background-color: blue;
+}
+
+.item5 {
+    -fx-background-color: violet;
+}
+
+.item6 {
+    -fx-background-color: coral;
 }
 
 .flex-pane {
