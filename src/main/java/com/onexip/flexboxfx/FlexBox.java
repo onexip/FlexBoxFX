@@ -202,7 +202,10 @@ public class FlexBox extends Pane
         }
 
         long duration = System.nanoTime() - timeStart;
-        System.out.println(String.format("# layout duration: %d ms", duration / 1000));
+        if (verbose)
+        {
+            System.out.println(String.format("# layout duration: %d ms", duration / 1000));
+        }
     }
 
     private void layoutChildrenForColumnDirection(List<FlexBoxItem> nodesList)
@@ -290,7 +293,7 @@ public class FlexBox extends Pane
         int i = 0;
 
         /**
-         * Precaluclations
+         * Precalculations
          */
         boolean useOrder = false;
         for (FlexBoxItem flexBoxItem : nodesList)
@@ -326,6 +329,7 @@ public class FlexBox extends Pane
         FlexBoxRow flexBoxRow = new FlexBoxRow();
         addToGrid(row, flexBoxRow);
 
+
         for (FlexBoxItem flexBoxItem : nodesList)
         {
             double nodeWidth = Math.max(growWidth, flexBoxItem.minWidth);
@@ -343,6 +347,7 @@ public class FlexBox extends Pane
                 row++;
                 flexBoxRow = new FlexBoxRow();
                 addToGrid(row, flexBoxRow);
+                minWidthSum = 0;
             }
             flexBoxRow.rowMinWidth += flexBoxItem.minWidth;
             flexBoxRow.flexGrowSum += flexBoxItem.grow;
@@ -407,7 +412,9 @@ public class FlexBox extends Pane
             i++;
         }
         lastY2 += getPadding().getBottom();
+
         setMinHeight(lastY2);
+        setPrefHeight(lastY2);
         setPrefWidth(lastY2);
         computedMinHeight = lastY2;
         performingLayout = false;
