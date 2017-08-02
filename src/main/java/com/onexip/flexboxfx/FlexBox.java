@@ -9,6 +9,7 @@ import javafx.scene.layout.Pane;
 import org.apache.commons.collections4.iterators.ReverseListIterator;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 /**
  * Created by TB on 11.10.16.
@@ -22,10 +23,19 @@ public class FlexBox extends Pane
     private boolean performingLayout = false;
     private Orientation bias;
     private boolean biasDirty = true;
-    private boolean verbose = true;
+    private boolean verbose = false;
     private static final String ORDER_CONSTRAINT = "flexbox-order";
     private static final String GROW_CONSTRAINT = "flexbox-grow";
 
+    public boolean isVerbose()
+    {
+        return verbose;
+    }
+
+    public void setVerbose(boolean verbose)
+    {
+        this.verbose = verbose;
+    }
 
     public FlexBoxDirection getDirection()
     {
@@ -189,7 +199,10 @@ public class FlexBox extends Pane
          */
         for (Node node : getManagedChildren())
         {
-            nodesList.add(new FlexBoxItem(node));
+            if (node.isVisible())
+            {
+                nodesList.add(new FlexBoxItem(node));
+            }
         }
 
         if (getDirection().equals(FlexBoxDirection.ROW) || getDirection().equals(FlexBoxDirection.ROW_REVERSE))    //todo:
@@ -431,6 +444,7 @@ public class FlexBox extends Pane
         biasDirty = true;
         bias = null;
         super.requestLayout();
+
     }
 
     private void addToGrid(int row, FlexBoxRow flexBoxRow)
