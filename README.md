@@ -1,12 +1,13 @@
 # FlexBoxFX
 FlexBoxFX is a JavaFX implementation of CSS3 flexbox layout manager (https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
-Official Website: http://flexboxfx.io                    
+Official Website: http://flexboxfx.io               
+
 Youtube trailer: https://www.youtube.com/watch?v=nuJ0s5imAdo
+
 Kickstarter: https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag
-                        
-<iframe width="480" height="270" src="https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag/widget/video.html" frameborder="0" scrolling="no"> </iframe>
-                        
+https://www.kickstarter.com/projects/ultramixer/flexboxfx-javafx-port-of-css3-flexbox-layout-manag/widget/video.html
+                                               
 
 # Why FlexBoxFX? #
 Modern user interface design means Responsive Design to match the needs of all platforms like Desktop, Web and Mobile and different target devices like Laptops, Tablets and Smartphones.
