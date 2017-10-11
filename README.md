@@ -55,6 +55,7 @@ compile('com.onexip:FlexBoxFX:0.1.5.3-SNAPSHOT')
 
 # License #
 (c) 2016 - 2017 onexip GmbH
+
 FlexBoxFX is open source and released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) –  so it is free to use for non-commercial and commercial use and
 
 # Team #
