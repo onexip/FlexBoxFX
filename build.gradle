@@ -1,5 +1,5 @@
 group 'com.onexip'
-version '0.1.5.1-SNAPSHOT'
+version '0.1.5.3-SNAPSHOT'
 
 apply plugin: 'java'
 
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-  compile('org.apache.commons:commons-collections4:4.1+')
+  compile('org.apache.commons:commons-collections4:4.1')
 
   testCompile('com.miglayout:miglayout-javafx:5.1.1-SNAPSHOT')
   testCompile group: 'junit', name: 'junit', version: '4.12'
