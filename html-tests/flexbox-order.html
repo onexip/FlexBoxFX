@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style type="text/css">
+        .flexbox-container {
+            display: flex; /* or inline-flex */
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            justify-content: center;
+            align-items: stretch;
+
+            flex-wrap: wrap;
+            flex-direction: row;
+
+        }
+
+        .flexbox-container .item {
+            flex-grow: 1;
+            text-align: center;
+            font-family: sans-serif;
+            min-width: 200px;
+
+        }
+
+        .box1 {
+            background-color: yellow;
+            order: 5;
+
+        }
+
+        .box2 {
+            background-color: red;
+            order: 1;
+        }
+
+        .box3 {
+            background-color: green;
+            order: 10;
+        }
+    </style>
+</head>
+<body>
+<h1>Test: Order</h1>
+<div class="flexbox-container">
+    <div class="item box1">Item 5</div>
+    <div class="item box2">Item 1</div>
+    <div class="item box3">Item 10</div>
+</div>
+</body>
+</html>

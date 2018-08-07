@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<?import com.onexip.flexboxfx.FlexBox?>
+<MigPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id=""
+        stylesheets="@skin.css"
+        prefWidth="800" prefHeight="300"
+        layout="ins 0" cols="[fill,grow]" rows="[]push"
+>
+    <FlexBox fx:id="flexBoxPane" horizontalSpace="20" verticalSpace="20" styleClass="flex-pane" direction="ROW">
+        <Label wrapText="true" styleClass="item,item1"
+               text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+        >
+        </Label>
+        <Label wrapText="true" styleClass="item,item2"
+               text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+        ></Label>
+        <Label wrapText="true" styleClass="item,item3"
+               text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+        ></Label>
+    </FlexBox>
+</MigPane>

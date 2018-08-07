@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<?import com.onexip.flexboxfx.FlexBox?>
+<MigPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id=""
+        stylesheets="@skin.css"
+        prefWidth="800" prefHeight="300"
+        layout="ins 0" cols="[fill,grow]" rows="[]push"
+>
+    <FlexBox fx:id="flexBoxPane" horizontalSpace="20" verticalSpace="20" styleClass="flex-pane" direction="ROW">
+        <Button text="Item 1" styleClass="item,item1"></Button>
+        <Button text="Item 2" styleClass="item,item2"></Button>
+        <Button text="Item 3" styleClass="item,item3"></Button>
+    </FlexBox>
+</MigPane>

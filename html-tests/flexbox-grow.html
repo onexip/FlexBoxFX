@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style type="text/css">
+        .flexbox-container {
+            display: flex; /* or inline-flex */
+            height: 100px;
+            width: 100%;
+            background-color: black;
+
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+        }
+
+        .flexbox-container .item {
+            text-align: center;
+            font-family: sans-serif;
+            min-width: 200px;
+
+        }
+
+        .box1 {
+            background-color: yellow;
+            flex-grow: 1;
+
+        }
+
+        .box2 {
+            background-color: red;
+            flex-grow: 2;
+        }
+
+        .box3 {
+            background-color: green;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+<h1>Test: flex-grow</h1>
+<div class="flexbox-container">
+    <div class="item box1">flex-grow:1</div>
+    <div class="item box2">flex-grow:2</div>
+    <div class="item box3">flex-grow:1</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.onexip.flexboxfx.*?>
+<?import javafx.scene.control.*?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<MigPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id=""
+        stylesheets="@skin.css"
+        prefWidth="800" prefHeight="300"
+        fx:controller="com.onexip.flexboxfx.test.Test2Controller"
+        layout="ins 0,flowy" cols="[fill,grow]" rows="[][]push"
+>
+    <FlexBox fx:id="flexBoxPane" horizontalSpace="20" verticalSpace="20" styleClass="flex-pane" direction="ROW">
+        <Button text="i1: flex-grow: 1" styleClass="item,item1" FlexBox.grow="1"></Button>
+        <Button text="i2: flex-grow: 1" styleClass="item,item2" FlexBox.grow="1" visible="false"></Button>
+        <Button text="i3: flex-grow: 1" styleClass="item,item3" FlexBox.grow="1"></Button>
+        <Button  fx:id="item4" text="i4: flex-grow: 1" styleClass="item,item4" FlexBox.grow="1"></Button>
+        <!--
+
+
+        <Button text="i5: flex-grow: 1" styleClass="item,item5" FlexBox.grow="1"></Button>
+        <Button text="i6: flex-grow: 1" styleClass="item,item6" FlexBox.grow="1"></Button>
+        //-->
+    </FlexBox>
+
+
+</MigPane>
