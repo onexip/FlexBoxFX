@@ -345,8 +345,10 @@ public class FlexBox extends Pane
 
         for (FlexBoxItem flexBoxItem : nodesList)
         {
+
             //double nodeWidth = Math.max(growWidth, flexBoxItem.minWidth);
             double nodeWidth = flexBoxItem.minWidth;
+
             minWidthSum += nodeWidth;
 
             //is there one more node?
