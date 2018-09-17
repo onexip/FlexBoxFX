@@ -1,5 +1,6 @@
 module com.onexip.flexboxfx {
     requires javafx.graphics;
-    requires org.apache.commons.collections4;
-/*    requires org.apache.commons.collections4;*/
+    requires transitive commons.collections4;
+
+    exports com.onexip.flexboxfx;
 }
