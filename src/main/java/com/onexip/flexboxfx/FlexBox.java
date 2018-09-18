@@ -345,8 +345,10 @@ public class FlexBox extends Pane
 
         for (FlexBoxItem flexBoxItem : nodesList)
         {
-            double nodeWidth = Math.max(growWidth, flexBoxItem.minWidth);
-            nodeWidth = flexBoxItem.minWidth;
+
+            //double nodeWidth = Math.max(growWidth, flexBoxItem.minWidth);
+            double nodeWidth = flexBoxItem.minWidth;
+
             minWidthSum += nodeWidth;
 
             //is there one more node?
@@ -360,7 +362,7 @@ public class FlexBox extends Pane
                 row++;
                 flexBoxRow = new FlexBoxRow();
                 addToGrid(row, flexBoxRow);
-                minWidthSum = 0;
+                minWidthSum = nodeWidth;  //0; bug with 0
             }
             flexBoxRow.rowMinWidth += flexBoxItem.minWidth;
             flexBoxRow.flexGrowSum += flexBoxItem.grow;
